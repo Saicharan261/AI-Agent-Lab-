@@ -25,8 +25,8 @@ connection_pool = psycopg2.pool.SimpleConnectionPool(1, 10,
                                                      dbname=QDB_PG_NAME,
                                                      user=QDB_PG_USER,
                                                      password=QDB_PG_PASSWORD,
-                                                     host=QDB_PG_HOST,
-                                                     port=QDB_PG_PORT)
+                                                     host="docker-questdb-1",
+                                                     port="8812")
 
 def create_questdb_table():
     """Create a table in QuestDB."""
